@@ -1,24 +1,27 @@
-//Require Modules
+// Require modules
 const express = require('express');
 const morgan = require('morgan');
-const port = 3000;
+const port = 3000; 
+const indexRouter = require('./routes/index');
 
-//Set up express app
+// Set up express app
 const app = express();
 
-//Connect to DB
+// Connect to DB
 
-//configure the app with app.set()
-app.set('View engine', 'ejs');
 
-//Mount middleware with app.use()
+// Configure the app with app.set()
+app.set('view engine', 'ejs');
+
+// Mount middleware with app.use()
 app.use(morgan('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
-//Mount routes with app.use()
+// Mount routes with app.use()
+app.use('/', indexRouter);
 
-//Tell app to listen
-app.listen(port, function(){
-    console.log(`Express is listening on port:${port}`)
+// Tell App to listen
+app.listen(port, function() {
+    console.log(`Express is listening on port:${port}`);
 });
