@@ -13,7 +13,7 @@
 
 <h2>Details</h2>
 
-<% if (valuable.detials.length) { %>
+<% if (valuable.details.length) { %>
 <table>
   <thead>
     <tr>
@@ -26,18 +26,11 @@
   </thead>
   <tbody>
     <% valuable.details.forEach(function(d) { %>
-    <tr>
-      <td><%= d.createdAt.toLocaleDateString() %></td>
-      <td><%= define([
-          'require',
-          'dependency'
-      ], function(require, factory) {
-          'use strict';
-          
-      });.content %></td>
+   <tr>
+      
       <td><%= v.details %></td>
-    </tr>
-    <% }); %>
+     </tr> 
+   <% }); %>
   </tbody>
 </table>
   <table>

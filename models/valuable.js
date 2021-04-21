@@ -25,7 +25,10 @@ const valuableSchema = new Schema({
   valuableType: {
     type: String,
       },
-  datePurchased: Date,
+  datePurchased: { 
+    type: Date,
+  },
+    
   details: [detailSchema]
 
 }, {

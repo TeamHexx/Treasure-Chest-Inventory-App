@@ -11,7 +11,9 @@
   <tbody>
     <% valuables.forEach(function(v) { %>
       <tr>
-        <td><%= v.valuable %></td>
+        <td><%= v.make %></td> 
+        <td><%= v.model %></td> 
+        <td><%= v.valuableType %></td> 
         <td><%= v.datePurchased %></td>
         <td><a href="/valuables/<%= v._id %>">DETAILS</a></td>
       </tr>

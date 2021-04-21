@@ -9,7 +9,7 @@ module.exports = {
 
 function index(req, res) {
   Valuable.find({}, function (err, valuables) {
-    res.render("valuables/index", { title: "All Valuable Items", valuables });
+    res.render("valuables/index", { title: "Inside Your Treasure Chest", valuables });
   });
 }
 
@@ -37,6 +37,6 @@ function create(req, res) {
     // one way to handle errors
     if (err) return res.redirect("/valuables/new");
     // for now, redirect right back to the "new" view
-    res.redirect("/movies");
+    res.redirect("/valuables");
   });
 }
