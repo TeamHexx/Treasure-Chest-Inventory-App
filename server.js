@@ -1,8 +1,11 @@
-// Require modules
-const express = require('express');
-const morgan = require('morgan');
-const port = 3000; 
+const express = require("express");
+const morgan = require("morgan");
+const port = 3000;
+require("./config/database");
+
 const indexRouter = require('./routes/index');
+const valuablesRouter = require('./routes/valuables');
+const detailsRouter = require('./routes/details');
 
 // Set up express app
 const app = express();
@@ -20,6 +23,8 @@ app.use(express.urlencoded({ extended: false }));
 
 // Mount routes with app.use()
 app.use('/', indexRouter);
+app.use('/valuables', valuablesRouter);
+app.use('/', detailsRouter);
 
 // Tell App to listen
 app.listen(port, function() {

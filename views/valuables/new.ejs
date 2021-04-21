@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/valuables" method="POST">
+  <label>Make:</label>
+  <input type="text" name="make">
+  <label>Model:</label>
+  <input type="text" name="model">
+  <label for="datePurchased">Date Purchased</label>
+  <input type="date" id="datePurchased"
+               name="datePurchased" onchange=<%- "console.log(this.value);" %>/>
+  <input type="checkbox" name="nowShowing" checked>
+  <input type="submit" value="Add Movie">
+</form>
+
+<%- include('../partials/footer') %>

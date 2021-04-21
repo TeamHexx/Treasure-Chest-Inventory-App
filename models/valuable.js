@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const detialSchema = new Schema({
+const detailSchema = new Schema({
     serialNumber: Number,
     description: String,
     color: String,
     countryOrigin: String,
-    yearMade: Number,
+    year: Number,
     Warranty: Boolean,
     
 }, {
@@ -23,15 +23,10 @@ const valuableSchema = new Schema({
     required: true
   },
   valuableType: {
-    type: Number,
-    default: function () {
-      return new Date().getFullYear();
-    }
-  },
+    type: String,
+      },
   datePurchased: Date,
-  // cast: [String],
-  
-  details: [reviewSchema]
+  details: [detailSchema]
 
 }, {
   timestamps: true

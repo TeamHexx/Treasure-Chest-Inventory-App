@@ -3,12 +3,12 @@ const Valuable = require("../models/valuable");
 module.exports = {
   index,
   show,
-  new: newMovie,
+  new: newValuable,
   create,
 };
 
 function index(req, res) {
-  Movie.find({}, function (err, valuables) {
+  Valuable.find({}, function (err, valuables) {
     res.render("valuables/index", { title: "All Valuable Items", valuables });
   });
 }
