@@ -5,7 +5,7 @@
       <th>Make</th>
       <th>Model</th>
       <th>Valuable Type</th>
-      <th>Date Purchased</th>
+      <th>Year</th>
     </tr>
   </thead>
   <tbody>
@@ -14,7 +14,7 @@
         <td><%= v.make %></td> 
         <td><%= v.model %></td> 
         <td><%= v.valuableType %></td> 
-        <td><%= v.datePurchased %></td>
+        <td><%= v.datePurchased.getFullYear() %></td>
         <td><a href="/valuables/<%= v._id %>">DETAILS</a></td>
       </tr>
       <% }); %>
