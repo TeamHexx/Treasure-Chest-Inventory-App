@@ -5,45 +5,57 @@
   <div><%= valuable.make %></div>
   <div>Model: </div>
   <div><%= valuable.model %></div>
-  <div>Date of Purchase: </div>
-  <div><%= valuable.year %></div>
-  <div>Valuable Type: </div>
+  <div>Item Type: </div>
   <div><%= valuable.valuableType %></div>
+  <div>Date of Purchase: </div>
+  <div><%= valuable.datePurchased %></div>
+  
 </section>
 
 <h2>Details</h2>
 
 <% if (valuable.details.length) { %>
-<table>
-  <thead>
-    <tr>
-      <th>Serial Number</th>
-        <th>Description</th>
-        <th>Color</th>
-        <th>Country of Origin</th> 
-        <th>Warranty</th>
-    </tr>
-  </thead>
-  <tbody>
+  
     <% valuable.details.forEach(function(d) { %>
-   <tr>
+   <section id= "show-page">
+      <div>Serial Number</div>
+      <div><%= d.serialNumber %></div>
+      <div>Description</div>
+      <div><%= d.description %></div>
+      <div>Color</div>
+      <div><%= d.color %></div>
+      <div>Made/Manufactured in:</div>
+      <div><%= d.countryOrigin %></div>
+      <div>Year Made:</div>
+      <div><%= d.year %></div>
+      <div>Warranty:</div>
+      <div><%= d.warranty %></div>
       
-      <td><%= v.details %></td>
-     </tr> 
+
+     
    <% }); %>
   </tbody>
-</table>
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Review</th>
-        <th>Rating</th>
-      </tr>
-    </thead>
-  </table>
+</section>
+  
 <% } else { %>
 <h5>No Details Yet</h5>
 <% } %>
 
 <h2>Add Details:</h2>
+<form id="add-detail-form" method="POST" action="/valuables/<%= valuable._id %>/details">
+  <label>Serial Number:</label>
+  <input type="text" name="serialNumber">
+  <label>Description:</label>
+  <input type="text" name="description">
+  <label>Color:</label>
+  <input type="text" name="color">
+  <label>Made/Manufactured in:</label>
+  <input type="text" name="countryOrigin">
+  <label>Year Made:</label>
+  <input type="text" name="year">
+  <label for="warranty">Warranty</label>
+  <label><input type="checkbox" id="warranty"/> Click Checkbox For Yes
+</label>
+<input type="submit" value="Add Details">
+</form>
+<%- include('../partials/footer') %>

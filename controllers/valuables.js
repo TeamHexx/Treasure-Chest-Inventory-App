@@ -15,7 +15,7 @@ function index(req, res) {
 
 function show(req, res) {
   Valuable.findById(req.params.id, function (err, valuable) {
-    res.render("valuables/show", { title: "Valuable Detail", valuable });
+    res.render("valuables/show", { title: "Details", valuable });
   });
 }
 

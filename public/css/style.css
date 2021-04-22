@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: Helvetica;
-    color: #F24D29;
+    color: #EAC43D;
     ;
   }
   
@@ -14,10 +14,14 @@
       "nav"
       "main"
   }
+  h1{
+    font-size: 64px;
+    color:#A6CD4E;
+  }
   
   body > nav {
     grid-area: nav;
-    background-color: #1DACE8;
+    background-color: #EAC43D;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -36,7 +40,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #E8ECEB;
+    background-color: #242E38;
     padding: 20px;
     overflow-y: scroll;
   }
@@ -48,18 +52,21 @@
   nav > a {
     margin: 20px;
     text-decoration: none;
-    padding: 0px;
-    border-radius: 7px;
-    background-color: #E8ECEB;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #242E38;
   }
   
   nav > a:hover {
-    color: #B8C0C2;
-    background-color: #d2d5d6;
+    color: #EAC43D;
+    background-color: #14c0cc;
   }
 
   nav > a.active {
-    color: white;
+    color: #14c0cc;
+  }
+  label {
+    font-size: 24px;
   }
   
   #new-form {
@@ -68,7 +75,7 @@
     grid-template-columns: repeat(2, minmax(auto, 22rem));
   }
   
-  #new-form *,  #add-review-form * {
+  #new-form *,  #add-detail-form * {
     font-size: 20px;
     padding: 5px;
     border-radius: 5px;
@@ -85,8 +92,8 @@
   }
 
   th {
-    color: #1DACE8;
-    font-size: 45px;
+    color: #14c0cc;
+    font-size: 35px;
     font-style: oblique;
   }
   
@@ -106,14 +113,15 @@
   
   #list a {
     border-radius: 4px;
-    background-color: #B8C0C2;
+    background-color: #EAC43D;
+    color: #242E38;
     padding: 4px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
   }
   
   #list a:hover {
-    background-color: white;
+    background-color: #14c0cc;
   }
   
   #show-page {
@@ -126,13 +134,14 @@
     font-weight: bold;
   }
   
-   #add-review-form {
+   #add-detail-form {
      display: grid;
      grid-template-columns: auto auto;
      grid-gap: 1rem;
    }
-   #add-review-form input[type="submit"] {
+   #add-detail-form input[type="submit"] {
      width: 8rem;
      grid-column: 2 / 3;
      margin-bottom: 2rem;
+     color:#424748;
    }

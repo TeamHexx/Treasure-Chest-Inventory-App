@@ -4,8 +4,8 @@
     <tr>
       <th>Make</th>
       <th>Model</th>
-      <th>Valuable Type</th>
-      <th>Year</th>
+      <th>Item</th>
+      <th>Purchase Year</th>
     </tr>
   </thead>
   <tbody>
@@ -15,7 +15,7 @@
         <td><%= v.model %></td> 
         <td><%= v.valuableType %></td> 
         <td><%= v.datePurchased.getFullYear() %></td>
-        <td><a href="/valuables/<%= v._id %>">DETAILS</a></td>
+        <td><a href="/valuables/<%= v._id %>">Details</a></td>
       </tr>
       <% }); %>
     </tbody>
