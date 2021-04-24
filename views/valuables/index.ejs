@@ -2,20 +2,24 @@
 <table id="list">
   <thead>
     <tr>
+      <th></th>
       <th>Make</th>
       <th>Model</th>
       <th>Item</th>
-      <th>Purchase Year</th>
+      <th>Date Purchased</th>
     </tr>
   </thead>
   <tbody>
     <% valuables.forEach(function(v) { %>
       <tr>
+        <td><form action="/valuables/<%= v._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete</button>
+      </form></td>
         <td><%= v.make %></td> 
         <td><%= v.model %></td> 
         <td><%= v.valuableType %></td> 
-        <td><%= v.datePurchased.getFullYear() %></td>
-        <td><a href="/valuables/<%= v._id %>">Details</a></td>
+        <td><%= v.datePurchased.toLocaleDateString() %></td>
+        <td><a href="/valuables/<%= v.id %>">Details</a></td>
       </tr>
       <% }); %>
     </tbody>

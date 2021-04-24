@@ -1,8 +1,14 @@
-// inside of controllers/index.js
-// module.exports = {
-//     index
-// };
+const valuables = require("./valuables");
 
-// function index(req, res) {
-//     res.render('index');
-// }
+module.exports = {
+    index,
+    
+};
+
+function index(req, res) {
+    res.render('valuables/index', {
+        valuables: valuables.getAll()
+    });
+
+}
+

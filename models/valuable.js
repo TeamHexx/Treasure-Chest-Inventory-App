@@ -1,4 +1,12 @@
+module.exports = {
+  deleteOne,
+}
+function deleteOne(valuableIdx) {
+  valuables.splice(valuableIdx, 1);
+}
+
 const mongoose = require("mongoose");
+const valuables = require("../controllers/valuables");
 const Schema = mongoose.Schema;
 
 const detailSchema = new Schema({
@@ -27,11 +35,12 @@ const valuableSchema = new Schema({
       },
   datePurchased: { 
     type: Date,
+    default: new Date('01-13-1985')
   },
-    
-  details: [detailSchema]
+  details: [detailSchema],
+  
 
-}, {
+  }, {
   timestamps: true
 });
 

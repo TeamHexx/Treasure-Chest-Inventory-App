@@ -5,6 +5,8 @@ module.exports = {
   show,
   new: newValuable,
   create,
+  delete: deleteValuable,
+  // update
 };
 
 function index(req, res) {
@@ -40,3 +42,16 @@ function create(req, res) {
     res.redirect("/valuables");
   });
 }
+
+ 
+function deleteValuable(req, res) {
+  Valuable.findByIdAndDelete(req.params.id, function(err, valuable) {
+      res.redirect(`/valuables`);
+  });
+}
+
+// function update(req, res) {
+//   req.body.done = false;
+//   Valuable.updateOne(req.body, req.params.id)
+//   res.redirect('/valuables')
+// }
