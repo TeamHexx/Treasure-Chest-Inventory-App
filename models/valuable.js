@@ -1,8 +1,22 @@
 module.exports = {
   deleteOne,
+  updateOne,
+  edit,
+  getOne,
 }
 function deleteOne(valuableIdx) {
   valuables.splice(valuableIdx, 1);
+}
+function updateOne(updatedValuable, valuableIdx) {
+  valuables.splice(valuableIdx, 1, updatedValuable);
+}
+function edit(req, res) {
+  res.render('valuables/<%= valuable._id %>/edit', {
+      Valuable: Valuable.getOne(req.params.id)
+  });
+}
+function getOne (valuableIdx) {
+  return valuable[valuableIdx]
 }
 
 const mongoose = require("mongoose");

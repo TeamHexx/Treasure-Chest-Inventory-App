@@ -8,7 +8,7 @@
   <div>Item Type: </div>
   <div><%= valuable.valuableType %></div>
   <div>Date of Purchase: </div>
-  <div><%= valuable.datePurchased %></div>
+  <div><%= valuable.datePurchased.toLocaleDateString() %></div>
   
 </section>
 
@@ -41,8 +41,9 @@
 <h5>No Details Yet</h5>
 <% } %>
 
-<h2>Add Details:</h2>
-<form id="add-detail-form" method="POST" action="/valuables/<%= valuable._id %>/details">
+<h2>Add/Edit Details:</h2>
+<a href="/valuables/<%= valuable._id %>/edit">Edit Details</a>
+<!-- <form id="add-detail-form" method="POST" action="/valuables/<%= valuable._id %>/details">
   <label>Serial Number:</label>
   <input type="text" name="serialNumber">
   <label>Description:</label>
@@ -57,5 +58,5 @@
   <label><input type="checkbox" id="warranty"/> Click Checkbox For Yes
 </label>
 <input type="submit" value="Add Details">
-</form>
+</form> -->
 <%- include('../partials/footer') %>

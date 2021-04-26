@@ -6,7 +6,8 @@ module.exports = {
   new: newValuable,
   create,
   delete: deleteValuable,
-  // update
+  edit,
+  update
 };
 
 function index(req, res) {
@@ -49,9 +50,18 @@ function deleteValuable(req, res) {
       res.redirect(`/valuables`);
   });
 }
+function edit(req, res) {
+  Valuable.findById(req.params.id, function(err, valuable) {
+    res.render('valuables/edit', {valuable: valuable})
+  });
+  
+    // valuable: Valuable.getOne(req.params.id),
+    
+  };
 
-// function update(req, res) {
-//   req.body.done = false;
-//   Valuable.updateOne(req.body, req.params.id)
-//   res.redirect('/valuables')
-// }
+
+function update(req, res) {
+  req.body.done = false;
+  Valuable.findbyIdandUpdate(req.body, req.params.id);
+  res.redirect('/valuables');
+}

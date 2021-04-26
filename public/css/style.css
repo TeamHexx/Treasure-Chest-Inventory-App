@@ -1,38 +1,54 @@
 * {
     box-sizing: border-box;
     font-family: Helvetica;
-    color: #EAC43D;
-    ;
+    color: #EAE4cc;
+    
   }
   
   body {
     margin: 0;
     height: 100vh;
     display: grid;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 60px 1fr;
     grid-template-areas:
       "nav"
-      "main"
+      "main";
+      background-color: #182335;
+
   }
-  h1{
-    font-size: 64px;
-    color:#A6CD4E;
+  h1 {
+    color: #E15546;
+    font-style: oblique;
+    border-radius: 5px;
+    
   }
+  h2{
+    color: #EEAF9D;
+    border-radius: 5px;
+    padding:20px
+  }
+  h5{
+    padding: 20px;
+  }
+  button{
+    background-color: #eae4cc;
+    border-radius: 5px;
+    color: #c94541;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  
   
   body > nav {
     grid-area: nav;
-    background-color: #EAC43D;
+    background-color:#EAE4cc;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 20px 0 30px;
-    font-weight: bold;;
-  }
-  
-  nav > img {
-    width: 34px;
-    object-fit: contain;
-    margin-right: auto;
+    /* padding: 0 20px 0 30px; */
+    font-weight: bold;
+    
   }
   
   body > main {
@@ -40,13 +56,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #242E38;
-    padding: 20px;
-    overflow-y: scroll;
+    background-color: #182335;
+    overflow-y: auto;
+    
   }
   
   body > main h1:first-child {
     margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 10px;
   }
   
   nav > a {
@@ -54,48 +72,77 @@
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
-    background-color: #242E38;
+    background-color: #e15546;
+    color:#eae4cc
   }
   
   nav > a:hover {
-    color: #EAC43D;
-    background-color: #14c0cc;
+    color: #eae4cc;
+    background-color: #eeaf9d;
   }
 
   nav > a.active {
-    color: #14c0cc;
+    color: #182335;
   }
   label {
-    font-size: 24px;
+    font-size: 36px;
   }
   div{
-    color:aliceblue;
+    color:#eae4cc;
+    font-size: 22px;
+    font-weight: lighter;
+    padding: 5px;
   }
   
   #new-form {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(2, minmax(auto, 22rem));
+    grid-template-columns: repeat(2, minmax(auto, 18rem));
+    background-color: #182335;
+
+  }
+  #edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #182335;
+    overflow-y:auto;
+    grid-gap: 10px;
+    background-color: #182335;
+    color: #E15546;
+    
+  }
+  input {
+    background-color: #EAE4cc;
+    color: #182335;
   }
   
-  #new-form *,  #add-detail-form * {
+  #new-form *,  #add-detail-form *,#edit-form {
     font-size: 20px;
     padding: 5px;
     border-radius: 5px;
+    
   }
   
-  #new-form input[type="submit"] {
+  #new-form input[type="submit"]{
     grid-column: span 2;
     width: 10rem;
+    
     margin-left: auto;
   }
-  
+  #edit-form input[type="submit"] {
+    width: 8rem;
+    color:#e15546;
+    background-color: #EEAF9D;
+    padding: 5px;
+  }
+ 
   table {
     font-size: 20px;
   }
 
   th {
-    color: #14c0cc;
+    color: #eeaf9d;
     font-size: 35px;
     font-style: oblique;
   }
@@ -108,7 +155,10 @@
   table td {
     padding: 10px;
     text-align: center;
+    font-size: 18px;
+    font-weight: lighter;
   }
+  
   
   #list td:nth-child(2), #list td:nth-child(3){
     min-width: 100px;
@@ -116,28 +166,38 @@
   
   #list a {
     border-radius: 4px;
-    background-color: #EAC43D;
-    color: #242E38;
-    padding: 4px;
+    background-color: #eae4cc;
+    color: #e15546;
+    padding: 5px;
     text-decoration: none;
+    font-weight: bold;
     font-size: 18px;
   }
   
   #list a:hover {
-    background-color: #14c0cc;
+    background-color: #eeaf9d;
+    color:#e15546;
+    padding: 5px;
+    
   }
   
   #show-page {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 1rem;
+    padding-bottom: 20px;
   }
   
   #show-page div:nth-child(even) {
-    font-weight: bold;
+    font-size: 20px;
+    font-family: monospace;
+    color: #FD9301;
+    padding: 10px;
+    padding-inline: 100px;
   }
   
    #add-detail-form {
+     box-sizing: border-box;
      display: grid;
      grid-template-columns: auto auto;
      grid-gap: 1rem;
