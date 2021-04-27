@@ -12,10 +12,10 @@
   
 </section>
 
-<h2>Details</h2>
 
+
+<% console.log(valuable.details, "show-page-valuable-details") %>
 <% if (valuable.details.length) { %>
-  
     <% valuable.details.forEach(function(d) { %>
    <section id= "show-page">
       <div>Serial Number</div>
@@ -28,10 +28,13 @@
       <div><%= d.countryOrigin %></div>
       <div>Year Made:</div>
       <div><%= d.year %></div>
-      <div>Warranty:</div>
-      <div><%= d.warranty %></div>
-      
+      <div>Picture:</div>
+      <div><%= d.picture %></div>
+      <div>
+        <a class="links" href="/valuables/<%= valuable._id %>/edit">Edit Details</a>
+      </div> 
 
+      
      
    <% }); %>
   </tbody>
@@ -39,24 +42,10 @@
   
 <% } else { %>
 <h5>No Details Yet</h5>
+
+<a class="links" href="/valuables/<%= valuable._id %>/add">Add Details</a>
+
 <% } %>
 
-<h2>Add/Edit Details:</h2>
-<a href="/valuables/<%= valuable._id %>/edit">Edit Details</a>
-<!-- <form id="add-detail-form" method="POST" action="/valuables/<%= valuable._id %>/details">
-  <label>Serial Number:</label>
-  <input type="text" name="serialNumber">
-  <label>Description:</label>
-  <input type="text" name="description">
-  <label>Color:</label>
-  <input type="text" name="color">
-  <label>Made/Manufactured in:</label>
-  <input type="text" name="countryOrigin">
-  <label>Year Made:</label>
-  <input type="text" name="year">
-  <label for="warranty">Warranty</label>
-  <label><input type="checkbox" id="warranty"/> Click Checkbox For Yes
-</label>
-<input type="submit" value="Add Details">
-</form> -->
+
 <%- include('../partials/footer') %>

@@ -21,19 +21,20 @@ function getOne (valuableIdx) {
 
 const mongoose = require("mongoose");
 const valuables = require("../controllers/valuables");
+
 const Schema = mongoose.Schema;
 
 const detailSchema = new Schema({
-    serialNumber: Number,
+    serialNumber: String,
     description: String,
     color: String,
     countryOrigin: String,
     year: Number,
-    Warranty: Boolean,
+    picture: String,
     
-}, {
-  timestamps: true
-});
+  
+},
+{timestamps: true});
 
 const valuableSchema = new Schema({
   make: {

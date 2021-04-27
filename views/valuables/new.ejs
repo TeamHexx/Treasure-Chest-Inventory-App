@@ -2,15 +2,15 @@
 
 <form id="new-form" action="/valuables" method="POST">
   <label>Make:</label>
-  <input type="text" name="make">
+  <input type="text" name="make" required>
   <label>Model:</label>
-  <input type="text" name="model">
+  <input type="text" name="model" required>
   <label>Type:</label>
-  <input type="text" name="valuableType">
+  <input type="text" name="valuableType" required>
   <label for="datePurchased">Date Purchased</label>
   <input type="date" id="datePurchased"
-               name="datePurchased" value="01-13-1985"/>
-  <input type="submit" value="Add Valuable">
+               name="datePurchased" value="01-13-1985" required/>
+  <input type="submit" value="Add">
 </form>
 
 <%- include('../partials/footer') %>

@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+    
+
+<h2>Add Details:</h2>
+<form id="new-form"  action="/valuables/<%= valuableId %>" method="POST">
+    <label>Serial Number:</label>
+        <input type="text" name="serialNumber">
+        <label>Description:</label>
+        <input type="text" name="description">
+        <label>Color:</label>
+        <input type="text" name="color">
+        <label>Made/Manufactured in:</label>
+        <input type="text" name="countryOrigin">
+        <label>Year Made:</label>
+        <input type="text" name="year">
+        <label for="Picture">Picture URL</label>
+        <input type="text" name="Picture"/>
+    </label>
+<input type="submit" value="Add Details">
+</form>
+
+
+<%- include('../partials/footer') %>
