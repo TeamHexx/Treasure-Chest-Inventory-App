@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+const connectionURI = process.env.DATABASE_URI;
+
 const connectionString = "mongodb+srv://admin:abc1234@cluster0.6l4i9.mongodb.net/Treasure-Chest?retryWrites=true&w=majority";
 
 mongoose.connect(
