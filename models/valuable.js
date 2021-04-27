@@ -4,38 +4,45 @@ module.exports = {
   edit,
   getOne,
 }
+
 function deleteOne(valuableIdx) {
   valuables.splice(valuableIdx, 1);
 }
+
 function updateOne(updatedValuable, valuableIdx) {
   valuables.splice(valuableIdx, 1, updatedValuable);
 }
+
 function edit(req, res) {
   res.render('valuables/<%= valuable._id %>/edit', {
-      Valuable: Valuable.getOne(req.params.id)
+    Valuable: Valuable.getOne(req.params.id)
   });
 }
-function getOne (valuableIdx) {
+
+function getOne(valuableIdx) {
   return valuable[valuableIdx]
 }
 
-const { urlencoded } = require("express");
+const {
+  urlencoded
+} = require("express");
 const mongoose = require("mongoose");
 const valuables = require("../controllers/valuables");
 
 const Schema = mongoose.Schema;
 
 const detailSchema = new Schema({
-    serialNumber: String,
-    description: String,
-    color: String,
-    countryOrigin: String,
-    year: Number,
-    picture: String,
-    
-  
-},
-{timestamps: true});
+  serialNumber: String,
+  description: String,
+  color: String,
+  countryOrigin: String,
+  year: Number,
+  pictures: String,
+
+
+}, {
+  timestamps: true
+});
 
 const valuableSchema = new Schema({
   make: {
@@ -48,15 +55,15 @@ const valuableSchema = new Schema({
   },
   valuableType: {
     type: String,
-      },
-  datePurchased: { 
+  },
+  datePurchased: {
     type: Date,
     default: new Date('01-13-1985')
   },
   details: [detailSchema],
-  
 
-  }, {
+
+}, {
   timestamps: true
 });
 

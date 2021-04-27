@@ -9,37 +9,35 @@
   <div><%= valuable.valuableType %></div>
   <div>Date of Purchase: </div>
   <div><%= valuable.datePurchased.toLocaleDateString() %></div>
-  
+
 </section>
 
 
 
 <% console.log(valuable.details, "show-page-valuable-details") %>
 <% if (valuable.details.length) { %>
-    <% valuable.details.forEach(function(d) { %>
-   <section id= "show-page">
-      <div>Serial Number</div>
-      <div><%= d.serialNumber %></div>
-      <div>Description</div>
-      <div><%= d.description %></div>
-      <div>Color</div>
-      <div><%= d.color %></div>
-      <div>Made/Manufactured in:</div>
-      <div><%= d.countryOrigin %></div>
-      <div>Year Made:</div>
-      <div><%= d.year %></div>
-      <div>Picture:</div>
-      <div><%= d.picture %></div>
-      <div>
-        <a class="links" href="/valuables/<%= valuable._id %>/edit">Edit Details</a>
-      </div> 
+<% valuable.details.forEach(function(d) { %>
+<section id="show-page">
+  <div>Serial Number</div>
+  <div><%= d.serialNumber %></div>
+  <div>Description</div>
+  <div><%= d.description %></div>
+  <div>Color</div>
+  <div><%= d.color %></div>
+  <div>Made/Manufactured in:</div>
+  <div><%= d.countryOrigin %></div>
+  <div>Year Made:</div>
+  <div><%= d.year %></div>
+  <div>Picture:</div>
+  <div><img src="<%= d.pictures %>" width="200"></img></div>
+  <div>
+    <a class="links" href="/valuables/<%= valuable._id %>/edit">Edit Details</a>
+  </div>
 
-      
-     
-   <% }); %>
+  <% }); %>
   </tbody>
 </section>
-  
+
 <% } else { %>
 <h5>No Details Yet</h5>
 
