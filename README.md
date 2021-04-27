@@ -5,6 +5,9 @@
 #### A simple inventory application that stores important information about all your valuable items
 <br><br>
 
+## Technologies Used:
+HTML5, CSS, Javascript, Node.js, MongoDB, Heroku
+
 ## How to Start:
 #### To begin, you will add an item by clicking "add valuable"
 ![Treasure Chest](public/images/Add.jpg)
