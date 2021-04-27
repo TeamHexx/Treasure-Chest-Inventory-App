@@ -66,7 +66,7 @@ function add(req, res) {
   const valuableId = req.params.id;
   res.render('valuables/add', { 
     valuableId, 
-    title: 'Add'
+    title: 'Add Details'
   });
 }
 function addDetails(req, res) {
