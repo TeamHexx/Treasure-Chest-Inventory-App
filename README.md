@@ -9,7 +9,7 @@
 HTML5, CSS, Javascript, Node.js, MongoDB, Heroku
 
 ## How to Start:
-#### To begin, you will add an item by clicking "add valuable"
+#### To begin click <a href="https://treasure-chest-inventory.herokuapp.com/valuables">here</a>, you will add an item by clicking "add valuable"
 ![Treasure Chest](public/images/Add.jpg)
 
 ## To add details:
