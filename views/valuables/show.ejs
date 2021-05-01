@@ -10,14 +10,14 @@
   <div>Date of Purchase: </div>
   <div><%= valuable.datePurchased.toLocaleDateString() %></div>
 
-</section>
+
 
 
 
 <% console.log(valuable.details, "show-page-valuable-details") %>
 <% if (valuable.details.length) { %>
 <% valuable.details.forEach(function(d) { %>
-<section id="show-page">
+
   <div>Serial Number</div>
   <div><%= d.serialNumber %></div>
   <div>Description</div>
@@ -36,7 +36,7 @@
 
   <% }); %>
   </tbody>
-</section>
+</section></section>
 
 <% } else { %>
 <h5>No Details Yet</h5>
