@@ -85,7 +85,7 @@ function addDetails(req, res) {
   Valuable.findById(req.params.id, function (err, valuable) {
     valuable.details.push(req.body);
     valuable.save(function (err) {
-      res.redirect(`/valuables`)
+      res.redirect(`/valuables/${valuable._id}`)
     });
   });
 }

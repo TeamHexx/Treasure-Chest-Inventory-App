@@ -6,8 +6,7 @@
 <form id="new-form"  action="/valuables/<%= valuable._id %>?_method=PUT" method="POST">
   <label>Serial Number:</label>
   <input type="text" name="serialNumber" value="<%- valuable.serialNumber %>">
-  <label>Description:</label>
-  <input type="text" name="description" value="<%- valuable.description %>">
+  
   <label>Color:</label>
   <input type="text" name="color" value="<%- valuable.color %>">
   <label>Made/Manufactured in:</label>
@@ -17,6 +16,8 @@
   <label for="pictures">Picture URL</label>
   <input type="text" name="pictures" value="<%- valuable.pictures %>"/>
 </label>
+<label>Comments:</label>
+  <textarea name="description" value="<%- valuable.description %>"></textarea>
 <input type="submit" value="Edit Details">
 </form>
 

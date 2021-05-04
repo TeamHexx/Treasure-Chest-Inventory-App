@@ -20,8 +20,6 @@
 
   <div>Serial Number</div>
   <div><%= d.serialNumber %></div>
-  <div>Description</div>
-  <div><%= d.description %></div>
   <div>Color</div>
   <div><%= d.color %></div>
   <div>Made/Manufactured in:</div>
@@ -30,6 +28,8 @@
   <div><%= d.year %></div>
   <div>Picture:</div>
   <div><a href="<%= d.pictures %>"><img src="<%= d.pictures %>" width="200"></img></a></div>
+  <div>Comments</div>
+  <div><%= d.description %></div>
   <div>
     <a class="links" href="/valuables/<%= valuable._id %>/edit">Edit Details</a>
   </div>
