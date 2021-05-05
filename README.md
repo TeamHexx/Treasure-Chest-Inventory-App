@@ -8,6 +8,12 @@
 ## Technologies Used:
 HTML5, CSS, Javascript, Node.js, MongoDB, Heroku
 
+## Wireframe:
+<a href="https://imgur.com/1cmSmad"><img src="https://i.imgur.com/1cmSmad.png" title="source: imgur.com" /></a>
+
+## ERD
+<a href="https://imgur.com/PeYGilp"><img src="https://i.imgur.com/PeYGilp.png" title="source: imgur.com" /></a>
+
 ## How to Start:
 ### This App is hosted on Heroku:  
 #### To begin click <a href="https://treasure-chest-inventory.herokuapp.com/valuables">here</a>, you will add an item by clicking "add valuable"
