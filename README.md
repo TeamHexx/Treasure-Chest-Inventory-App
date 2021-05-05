@@ -32,4 +32,5 @@ HTML5, CSS, Javascript, Node.js, MongoDB, Heroku
 <li>Add an authenticator to protect your data
 <li> Add a filter feature
 <li> Allow picture uploads
+  <li> OAUTH
 
